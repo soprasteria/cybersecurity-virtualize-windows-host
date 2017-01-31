@@ -162,6 +162,11 @@ printf "  <clock offset='utc'/>\n\
     <memballoon model='virtio'>\n\
       <address type='pci' domain='0x0000' bus='0x00' slot='0x04' function='0x0'/>\n\
     </memballoon>\n\
+  <tpm model='tpm-tis'>\n\
+    <backend type='passthrough'>\n\
+      <device path='/dev/tpm0'/>\n\
+    </backend>\n\
+  </tpm>\n\
   </devices>\n\
 </domain>">>host-windows.xml
 
